@@ -1,0 +1,26 @@
+﻿@model PersonsListModel
+
+@{
+    ViewData["Title"] = "Persons List";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Persons</h2>
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <td><b>Last name</b></td>
+        <td><b>First name</b></td>
+        <td><b>Age</b></td>
+    </tr>
+    </thead>
+    @foreach (var p in Model.Persons) {
+        <tr>
+            <td>@p.LastName</td>
+            <td>@p.FirstName</td>
+            <td>@p.Age</td>
+        </tr>
+    }
+</table>
